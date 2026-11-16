@@ -13,7 +13,7 @@ class GcdTest {
     }
 
     @Test
-    @DisplayName("gcd(12,8): 2 iterations; covers (x,13,16), (x,17,16), (x,17,20), (y,13,15T), (y,13,16), (y,13,17), (y,18,15), (y,18,16), (y,18,17), (tmp,16,18)")
+    @DisplayName("gcd(12,8): 2 iterations; covers (x,13,16), (x,17,16), (x,17,20), (y,13,15T), (y,13,16), (y,13,17), (y,18,15T), (y,18,15F), (y,18,16), (y,18,17), (tmp,16,18)")
     void gcdTwoIterations() {
         assertEquals(4, DataFlowTargets.gcd(12, 8));
     }
