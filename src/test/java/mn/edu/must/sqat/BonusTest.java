@@ -55,4 +55,10 @@ class BonusTest {
     void exactThresholdShortStreak() {
         assertEquals(5, DataFlowTargets.bonus(new int[] {1}, 1));
     }
+
+    @Test
+    @DisplayName("M2-KILL: [1,1,0,1,1,1], thr 6; best update at line 43 with present != streak")
+    void killsWrongVariableMutant() {
+        assertEquals(0, DataFlowTargets.bonus(new int[] {1, 1, 0, 1, 1, 1}, 6));
+    }
 }
